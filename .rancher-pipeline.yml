@@ -1,0 +1,19 @@
+stages:
+- name: Stage1
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: nginx:stable-alpine
+  - runScriptConfig:
+      image: php:latest
+      shellScript: COPY ./landing/index.html /usr/share/nginx/html
+- name: Stage2
+  steps:
+  - applyAppConfig:
+      catalogTemplate: Teste1
+      version: V1
+      name: MyAPP
+      targetNamespace: node
+timeout: 60
+notification: {}
