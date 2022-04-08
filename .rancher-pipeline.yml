@@ -1,9 +1,0 @@
-stages:
-- name: Stage1
-  steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: PHP/APP:v1
-timeout: 60
-notification: {}
