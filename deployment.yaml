@@ -11,6 +11,8 @@ spec:
       labels:
         app: my-landing
     spec:
+      imagePullSecrets:
+        - name: pipeline-docker-registry
       containers:
       - name: my-landing
         image: 127.0.0.1:34228/my-landing:${CICD_EXECUTION_SEQUENCE}
@@ -19,7 +21,7 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 81
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -29,5 +31,5 @@ spec:
   selector:
     app: my-landing
   ports:
-  - port: 81
-    targetPort: 81
+  - port: 80
+    targetPort: 80
