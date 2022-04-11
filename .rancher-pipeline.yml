@@ -1,0 +1,10 @@
+stages:
+- name: Stage1
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: example:v1
+      registry: 127.0.0.1:34228
+timeout: 60
+notification: {}
