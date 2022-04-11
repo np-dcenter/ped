@@ -9,7 +9,7 @@ stages:
 - name: Stage2
   steps:
   - applyAppConfig:
-      catalogTemplate: teste
+      catalogTemplate: example
       version: v1
       name: testeApp
       targetNamespace: ped
