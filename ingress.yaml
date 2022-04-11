@@ -15,4 +15,4 @@ spec:
       - path: /
         backend:
           serviceName: my-landing-svc
-          servicePort: 80
+          servicePort: 81
