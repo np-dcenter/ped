@@ -4,6 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: http:v1
+      tag: teste-app
+      registry: 127.0.0.1:34228
 timeout: 60
 notification: {}
