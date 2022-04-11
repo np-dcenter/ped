@@ -1,0 +1,9 @@
+stages:
+- name: Stage2
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: http:v1
+timeout: 60
+notification: {}
