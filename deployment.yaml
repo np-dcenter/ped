@@ -15,7 +15,7 @@ spec:
         - name: pipeline-docker-registry
       containers:
       - name: my-landing
-        image: 	docker-registry/my-landing
+        image: 	10.43.67.82:5000/my-landing
         ports:
         - containerPort: 80
 ---
