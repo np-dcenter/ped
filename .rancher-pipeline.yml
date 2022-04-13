@@ -5,6 +5,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: app:v1
+      pushRemote: true
+      registry: docker-registry
 - name: Step2
   steps:
   - applyYamlConfig:
