@@ -1,0 +1,13 @@
+stages:
+- name: Step1
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: app:v1
+- name: Step2
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
+notification: {}
