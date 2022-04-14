@@ -10,12 +10,9 @@ spec:
     metadata:
       labels:
         app: my-landing
-    spec:
-      imagePullSecrets:
-        - name: pipeline-docker-registry
       containers:
       - name: my-landing
-        image: my-landing:${CICD_EXECUTION_SEQUENCE}
+        image: 10.0.6.220:30000/my-landing:${CICD_EXECUTION_SEQUENCE}
         resources:
           limits:
             memory: "128Mi"
