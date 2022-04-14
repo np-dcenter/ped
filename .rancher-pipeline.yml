@@ -13,6 +13,3 @@ stages:
   steps:
     - applyYamlConfig:
         path: ./deployment.yaml
-- name: Ingress - Landing
-  when:
-    branch: main
