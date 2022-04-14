@@ -12,10 +12,14 @@ spec:
         app: my-landing
     spec:
       imagePullSecrets:
-        - name: pipeline-registry
+        - name: pipeline-docker-registry
       containers:
       - name: my-landing
-        image: 	my-landing
+        image: my-landing:${CICD_EXECUTION_SEQUENCE}
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 80
 ---
