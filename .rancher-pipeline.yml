@@ -1,13 +1,18 @@
 stages:
-- name: Step1
+- name: Publish - Landing
+  when:
+    branch: main
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: app:v1
-- name: Step2
+      tag: my-landing:${CICD_EXECUTION_SEQUENCE}
+- name: Deployment - Landing
+  when:
+    branch: main
   steps:
-  - applyYamlConfig:
-      path: ./deployment.yaml
-timeout: 60
-notification: {}
+    - applyYamlConfig:
+        path: ./deployment.yaml
+- name: Ingress - Landing
+  when:
+    branch: main
