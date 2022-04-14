@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: my-landing:${CICD_EXECUTION_SEQUENCE}
+      tag: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
       registry: 10.43.168.236
     env:
       PLUGIN_DEBUG: "true"
