@@ -5,7 +5,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
-      registry: 10.43.168.236
+      pushRemote: true
+      registry: 127.0.0.1:34520
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
