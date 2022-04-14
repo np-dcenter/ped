@@ -12,7 +12,7 @@ spec:
         app: my-landing
     spec:
       imagePullSecrets:
-        - name: pipeline-docker-registry
+        - name: pipeline-registry
       containers:
       - name: my-landing
         image: 	my-landing
