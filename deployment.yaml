@@ -11,6 +11,8 @@ spec:
       labels:
         app: my-landing
     spec:
+      imagePullSecrets:
+        - name: dc
       containers:
       - name: my-landing
         image: 10.0.6.220:30000/my-landing:${CICD_EXECUTION_SEQUENCE}
