@@ -12,7 +12,7 @@ spec:
         app: my-landing
     spec:
       imagePullSecrets:
-        - name: hub-dc
+        - name: pipeline-docker-registry
       containers:
       - name: my-landing
         image: my-landing:${CICD_EXECUTION_SEQUENCE}
