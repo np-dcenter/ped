@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: my-landing:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: 127.0.0.1:34520
+      registry: 10.43.168.236
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
