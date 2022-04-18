@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: my-landing
-        image: my-landing:${CICD_EXECUTION_SEQUENCE}
+        image: my-landing:v1
         resources:
           limits:
             memory: "128Mi"
