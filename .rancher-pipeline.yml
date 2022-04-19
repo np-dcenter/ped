@@ -5,7 +5,5 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: teste:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
-      registry: index.docker.io
 timeout: 60
 notification: {}
