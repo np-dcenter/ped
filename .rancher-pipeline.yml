@@ -5,5 +5,13 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: teste:${CICD_EXECUTION_SEQUENCE}
+- name: Deployment
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+    when:
+      event:
+        include:
+        - push
 timeout: 60
 notification: {}
