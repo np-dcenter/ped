@@ -4,7 +4,7 @@ metadata:
   name: app-service
 spec:
   selector:
-    app: helloserver
+    app: app-teste
   type: NodePort
   ports:
     - protocol: TCP
@@ -16,16 +16,16 @@ kind: Deployment
 metadata:
   name: example-helloserver
   labels:
-    app: helloserver
+    app: app-teste
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: helloserver
+      app: app-teste
   template:
     metadata:
       labels:
-        app: helloserver
+        app: app-teste
     spec:
       imagePullSecrets:
       - name: pipeline-docker-registry
