@@ -30,7 +30,7 @@ spec:
       imagePullSecrets:
       - name: pipeline-docker-registry
       containers:
-      - name: helloserver
+      - name: teste
         image: teste:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 80
